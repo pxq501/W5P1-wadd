@@ -70,9 +70,48 @@ body {
     font-size: 3em;
     color: red;
     position: absolute;
-    left: 50%;
+    left: 10%;
     bottom: 0%;
+    animation: moveUp 5s linear, moveRight 5s linear 5s, moveDown 5s linear 10s, moveLeft 5s linear 15s;
+
 }
+
+@keyframes moveUp {
+    from {
+        transform: translate(0%, 0%);
+    }
+    to {
+        transform: translate(0%, -200px);
+    }
+}
+@keyframes moveRight {
+    from {
+        transform: translate(0%, -200px);
+    }
+    to {
+        transform: translate(300px, -200px);
+    }
+}
+@keyframes moveDown {
+    from {
+        transform: translate(300px, -200px);
+    }
+    to {
+        transform: translate(300px, 0%);
+    }
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translate(300px, 0%);
+    }
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+
 
 /** Exercise 1.4 - add animation properties to each of the following classes (see guidance) **/
 .sun-container {
@@ -80,7 +119,45 @@ body {
     height: 100%;
     margin:auto;
     transform-origin: center bottom;
+    animation: rotating1 10s linear infinite;
 }
+
+@keyframes rotating1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg); 
+    }
+}
+
+.colorChange {
+    animation: colorChange 20s linear infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: 0;
+    }
+
+    25% {
+        background-color: 0;
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    75% {
+        background-color: 0;
+    }
+
+    100% {
+        background-color: 0;
+    }
+
+}
+
 
 .sun {
     color: yellow;
@@ -97,3 +174,35 @@ body {
     left:100%;
     bottom:0%;
 }
+
+
+
+.slideLeft {
+    animation: slideLeft 5s infinite linear;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+.turbulence1 {
+    animation: turbulence1 0.4s infinite linear;
+}
+
+@keyframes turbulence1 {
+    from {
+        transform: translateY(0%)
+    }
+    to {
+        transform: translateY(60%);
+    }
+}
+
+
